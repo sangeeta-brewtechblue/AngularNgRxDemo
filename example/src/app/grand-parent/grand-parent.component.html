@@ -1,0 +1,24 @@
+<!--<mat-toolbar color="primary">     
+    <span>being Actively Reactive with NgRx</span>
+</mat-toolbar>-->
+<div layout="row" layout-align="center" *ngIf="'onHungry$' && 'onThirsty$'" >
+     <div>
+    <section class="mat-typography">
+        <span class="mat-body-strong">
+<i  style="color:blue;">Is Baby Hungry?:</i>&nbsp;&nbsp;<i style="color:rgb(252, 91, 217);  " > {{ (onHungry$| async).m1 }} </i> &nbsp;&nbsp;
+        </span>
+        <span class="mat-body-strong">
+<i  style="color:blue;">Is Baby Thirsty?:</i>&nbsp;&nbsp;<i style="color:rgb(252, 91, 217); " >{{ (onThirsty$| async).m2 }}  </i>          
+        </span>&nbsp;&nbsp;
+        <button mat-mini-fab  [ngStyle]="{transform: 'scale(0.6)'
+    }" color="primary" (click)="resetAll()">
+            <mat-icon style="font-size: 18px;">thumb_up</mat-icon>
+        </button>
+        </section>
+    </div>     
+    <div>
+        
+    </div>
+</div>
+
+<app-parent></app-parent>
