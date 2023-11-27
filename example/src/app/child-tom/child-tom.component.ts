@@ -8,12 +8,12 @@ import { hungryTom, thirstyTom } from '../babycare.actions';
   styleUrls: ['./child-tom.component.sass']
 })
 export class ChildTomComponent {
-  hungry$:Observable<String>
-   thirsty$:Observable<String>
+  //hungry$:Observable<String>
+  // thirsty$:Observable<String>
 
    constructor(private store:Store<{msg:string}>){
-     this.hungry$ = store.select('msg')
-     this.thirsty$ = store.select('msg')
+   //  this.hungry$ = store.select('msg')
+   //  this.thirsty$ = store.select('msg')
     }
 
   amHungry(){

@@ -5,10 +5,19 @@
      <div>
     <section class="mat-typography">
         <span class="mat-body-strong">
-<i  style="color:blue;">Is Baby Hungry?:</i>&nbsp;&nbsp;<i style="color:rgb(252, 91, 217);  " > {{ (onHungry$| async).m1 }} </i> &nbsp;&nbsp;
+<i  style="color:blue;">Is Baby Hungry?:</i>&nbsp;&nbsp;<i style="color:rgb(252, 91, 217);  " >
+     {{ (onHungry$| async).m1 }} </i> &nbsp;&nbsp;
+     {{ babycareStore.baby()}} <br>
+     <div *ngIf="babycareStore.twoMessages.m1()!=''">
+     {{babycareStore.twoMessages.m1()}}
+    </div>
+    <div *ngIf="babycareStore.twoMessages.m2()!=''">
+     {{babycareStore.twoMessages.m2()}}
+    </div>
         </span>
         <span class="mat-body-strong">
-<i  style="color:blue;">Is Baby Thirsty?:</i>&nbsp;&nbsp;<i style="color:rgb(252, 91, 217); " >{{ (onThirsty$| async).m2 }}  </i>          
+<i  style="color:blue;">Is Baby Thirsty?:</i>&nbsp;&nbsp;<i style="color:rgb(252, 91, 217); " >
+    {{ (onThirsty$| async).m2 }}  </i>          
         </span>&nbsp;&nbsp;
         <button mat-mini-fab  [ngStyle]="{transform: 'scale(0.6)'
     }" color="primary" (click)="resetAll()">
